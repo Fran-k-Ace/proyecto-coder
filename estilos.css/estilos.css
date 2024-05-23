@@ -3,126 +3,218 @@
     box-sizing: border-box;
 }
 
+
+main{
+    margin: 20px;
+}
+
 header{
     
     background-color: cadetblue ;
     display:flex;
     flex-direction: row;
+    align-items: center;
 }
 
-.logo img{
-    display: flex;
-    width: 40%;
-    margin: 20px;
-    align-items: center;
-    justify-self: unset;
+.MainInicio div img{
+    width:75%;
+    height: 75%;
+    object-fit: cover;
+    margin: 5px;
+    align-content: center;
+
+
 }
 
-.nombre-emp{ display: flex;
-    justify-content: center;
-    align-items: center;
+/* inicio */
+
+    /* heder */
+        .logo img{
+            display: flex;
+            width: 40%;
+            margin: 20px;
+            align-items: center;
+            justify-self: unset;
+        }
+
+        .nombre-emp{ display: flex;
+            justify-content: center;
+            align-items: center;
+                margin: 20px;
+                
+        }
+    /*main*/    
+
+        .MainInicio {   
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: repeat(5, 1fr);
+            
+
+        }
+
+        main .p1 { display: none;}
+
+        main{background-color: black;
+            color: whitesmoke;
+
+        }
+
+        main .img1{ display: flex;
+            width: 90%;
+            margin: 0px 0px 20px 20px;
+
+        }
+
+        main .ul1{
+            display: none;
+            list-style-type: none;
+            
+        
+
+        }
+
+        .presen img,
+        .primero img,
+        .segundo img,
+        .tercero img{  display: flex;
+            width: 100%;
+            margin: 15px;
+        }
+
+
+
+        footer { background-color: cadetblue;}
+
+
+/* pag nosotros */
+
+        .MainNosotros {
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: repeat(6, 1fr);
+            }
+
+        .MainNosotros img{
+            width:50%;
+            height: 50%;
+            object-fit: cover;
+            margin: 5px;
+            align-content: center;
+
+        }
+
+
+
+
+        .historia img,
+        .vision img,.men2 img, 
+        .relaciones img
+        {
+            display: flex;
+            width: 100%;
+            margin: 0;
+        }
+
+        .nosotros p,h2,.historia p,h2,.relaciones p,h2,.vision p,h2{display: flex;
+
+            align-content: center;
+            justify-content: center;
+            margin: 15px;
+        }
+
+
+
+        .men2 ul{ display: flex;
+        flex-direction: row;
+        gap: 10%;
+        margin: 15px;
+        list-style: none;
+        color: whitesmoke;
+        }
+
+        .nosotros img {
+            display: flex;
+            width: 100%;
+            margin: 0px;
+        }
+        
+
+
+
+/* pag productos*/
+
+        .bg-menu{
+            background-color: cadetblue;
+            color:whitesmoke
+        }
+
+        .bg-productos {
+            background-color: gray-600;
+            color: #000;
+        }
+
+        .center1{display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .prod-hover:hover{
+            background-color: rgb(45, 45, 199);
+            color:whitesmoke;
+            transform: scale(1.1);}
+
+/* pag Proyectos*/
+    /* main*/
+        .MainProyec{
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: repeat(4, 1fr);
+
+        .MainProyec img{
+                width:50%;
+                height: 50%;
+                object-fit: cover;
+                margin: 5px;
+                align-content: center;
+    
+            }   
+
+        }
+            
+
+
+
+
+
+/* MQ */
+
+@media screen and (min-width: 1200px) {
+
+    .MainInicio{grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+        margin: 15px;
+        
+    }
+
+    .MainInicio .img1{
+        grid-column: span 2;
+    }
+
+    .MainNosotros{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
         margin: 20px;
         
-}
+    }
 
-main .p1 { display: none;}
+    .MainNosotros .men2{
+        grid-column: span 2;
 
-main{background-color: black;
-    color: whitesmoke;
+    }
 
-}
-
-main .img1{ display: flex;
-    width: 90%;
-    margin: 0px 0px 20px 20px;
-
-}
-
-main .ul1{
-    display: none;
-    list-style-type: none;
+        
+        
     
-   
-
 }
-
-.presen img,
-.primero img,
-.segundo img,
-.tercero img{  display: flex;
-    width: 100%;
-    margin: 15px;
-}
-
-
-
-footer { background-color: cadetblue;}
-
-
-<!-- pag nosotros-->
-
-
-
-
-
-
-
-.historia img,
-.vision img,.men2 img, 
-.relaciones img
-{
-    display: flex;
-    width: 100%;
-    margin: 0;
-}
-
-.nosotros p,h2,.historia p,h2,.relaciones p,h2,.vision p,h2{display: flex;
-
-    align-content: center;
-    justify-content: center;
-    margin: 15px;
-}
-
-
-
-.men2 ul{ display: flex;
-flex-direction: row;
-gap: 10%;
-margin: 15px;
-list-style: none;
-color: whitesmoke;
-}
-
-.nosotros img {
-    display: flex;
-    width: 100%;
-    margin: 0px;
-}
-
-.bg-menu{
-    background-color: cadetblue;
-    color:whitesmoke
-}
-
-.bg-productos {
-    background-color: gray-600;
-    color: #000;
-}
-
-.center1{display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.prod-hover:hover{
-    background-color: rgb(45, 45, 199);
-    color:whitesmoke;
-    transform: scale(1.1);
-
-
-
-
-}
-
-
